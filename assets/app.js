@@ -1,4 +1,4 @@
-var app = angular.module("app", [])
+var app = angular.module('app', [])
 
 app.service('PostsService', function ($http) {
     this.fetch = function() {
@@ -9,7 +9,7 @@ app.service('PostsService', function ($http) {
     }
 })
 
-app.controller("PostsController", function($scope, PostsService) {
+app.controller('PostsController', function($scope, PostsService) {
     PostsService.fetch().success(function (posts) {
         $scope.posts = posts
     })
@@ -17,7 +17,7 @@ app.controller("PostsController", function($scope, PostsService) {
     $scope.addPost = function () {
         if ($scope.postBody) {
             PostsService.create({
-                username: "jayplabs",
+                username: 'jayplabs',
                 body: $scope.postBody
             }).success(function (post) {
                 $scope.posts.unshift(post)

@@ -1,17 +1,17 @@
-var Post = require("../../models/post")
-var router = require("express").Router()
+var Post = require('../../models/post')
+var router = require('express').Router()
 
 
-router.get("/", function (req, res, next) {
+router.get('/', function (req, res, next) {
     Post.find()
-    .sort("-date")
+    .sort('-date')
     .exec(function (err, posts) {
         if (err) { return next(err) }
         res.json(posts)
     })
 })
 
-router.post("/", function (req, res, next) {
+router.post('/', function (req, res, next) {
     var post = new Post({
         username: req.body.username,
         body: req.body.body
