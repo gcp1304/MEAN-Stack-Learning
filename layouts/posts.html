@@ -24,34 +24,6 @@
             </ul>
         </div>
         <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.js'></script>
-        <script>
-            // create out app module
-            var app = angular.module("app", [])
-
-            // create the PostsController module dependency inject $scope
-            app.controller("PostsController", function($scope, $http) {
-                $http.get("/api/posts")
-                .success(function (posts) {
-                    $scope.posts = posts
-                })
-
-
-                // This functions runs when the "Add Post" button is clicked
-                $scope.addPost = function () {
-                    // only add post if there's a body
-                    if ($scope.postBody) {
-                        $http.post("/api/posts", {
-                            username: "jayplabs",
-                            body: $scope.postBody
-                        }).success(function (post) {
-                            //  unshift a new post to $scope.posts
-                            $scope.posts.unshift(post)
-                            // clear out the input field
-                            $scope.postBody = null
-                        })
-                    }
-                }
-            })
-        </script>
+        <script src='/app.js'></script>
     </body>
 </html>
