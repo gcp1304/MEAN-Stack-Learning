@@ -1,4 +1,3 @@
-angular.module('app', [])
 angular.module('app')
 .controller('PostsController', function($scope, PostsService) {
     PostsService.fetch().success(function (posts) {
@@ -15,14 +14,5 @@ angular.module('app')
                 $scope.postBody = null
             })
         }
-    }
-})
-angular.module('app')
-.service('PostsService', function ($http) {
-    this.fetch = function() {
-        return $http.get('/api/posts')
-    }
-    this.create = function(post) {
-        return $http.post('/api/posts', post)
     }
 })
