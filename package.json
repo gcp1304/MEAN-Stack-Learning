@@ -12,6 +12,7 @@
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.0.0",
     "jwt-simple": "^0.5.1",
-    "mongoose": "^4.7.2"
+    "mongoose": "^4.7.2",
+    "ws": "^1.1.1"
   }
 }
