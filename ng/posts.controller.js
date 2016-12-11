@@ -9,10 +9,15 @@ angular.module('app')
             PostsService.create({
                 username: 'jayplabs',
                 body: $scope.postBody
-            }).success(function (post) {
-                $scope.posts.unshift(post)
+            }).success(function () {
                 $scope.postBody = null
             })
         }
     }
+
+    $scope.$on('ws:new_post', function (_, post) {
+        $scope.$apply(function () {
+            $scope.posts.unshift(post)
+        })
+    })
 })
