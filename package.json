@@ -1,6 +1,7 @@
 {
   "name": "socialapp",
   "dependencies": {
+    "bcrypt": "^1.0.1",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
@@ -10,6 +11,7 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.0.0",
+    "jwt-simple": "^0.5.1",
     "mongoose": "^4.7.2"
   }
 }
