@@ -3,7 +3,7 @@ var router = express.Router()
 var path = require('path')
 
 router.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '../layouts', 'posts.html'))
+    res.sendFile(path.join(__dirname, '../layouts', 'app.html'))
 })
 
 router.use(express.static(path.join(__dirname, '/../assets')))
